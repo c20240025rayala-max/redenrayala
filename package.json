@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "build": "npm --prefix better-binary run build",
+    "preview": "npm --prefix better-binary run preview"
+  },
+  "dependencies": {
+    "gsap": "^3.15.1"
+  }
+}
