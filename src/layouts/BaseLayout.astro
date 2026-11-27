@@ -1,7 +1,7 @@
 ---
 import "../styles/global.css";
-import Header from "../Components/Header.astro";
-import Footer from "../Components/Footer.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <!doctype html>
@@ -13,8 +13,16 @@ import Footer from "../Components/Footer.astro";
         <meta name="generator" content={Astro.generator} />
         <meta
             name="description"
-            content="Reden Rayala - Web Developer. Explore my projects, services, and portfolio."
+            content="Reden Rayala - Web Developer. Explore my projects and portfolio."
         />
+        <script is:inline>
+            const savedTheme = localStorage.getItem("theme");
+            const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+            if (savedTheme === "dark" || (savedTheme !== "light" && prefersDark)) {
+                document.documentElement.classList.add("dark");
+            }
+        </script>
 
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <link rel="icon" href="/favicon.ico" />
@@ -22,7 +30,11 @@ import Footer from "../Components/Footer.astro";
         <title>Reden Rayala | Web Developer</title>
     </head>
 
-    <body class="flex min-h-screen flex-col">
+    <body class="flex min-h-screen flex-col bg-white text-slate-900 transition-colors dark:bg-slate-950 dark:text-slate-100">
+        <div
+            id="progressBar"
+            class="fixed left-0 top-0 z-50 h-1 w-full origin-left scale-x-0 bg-gradient-to-r from-pink-500 to-purple-500"
+        ></div>
         <Header />
 
         <main class="flex-1">
@@ -30,5 +42,8 @@ import Footer from "../Components/Footer.astro";
         </main>
 
         <Footer />
+        <script>
+            import "../scripts/animations.js";
+        </script>
     </body>
 </html>

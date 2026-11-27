@@ -5,6 +5,8 @@ dist/
 
 # dependencies
 node_modules/
+# Local copy of the old nested repository; the deployable app is at the root.
+/redenrayala/
 
 # logs
 npm-debug.log*

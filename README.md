@@ -1,43 +1,41 @@
-# Astro Starter Kit: Minimal
+# Reden Rayala Portfolio
+
+A static portfolio site built with Astro, Tailwind CSS, and GSAP.
+
+## Development
 
 ```sh
-npm create astro@latest -- --template minimal
+npm install
+npm run dev
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+The local development server runs at `http://127.0.0.1:5501`.
 
-## 🚀 Project Structure
+## Validation and build
 
-Inside of your Astro project, you'll see the following folders and files:
+```sh
+npm run astro -- check
+npm run build
+npm run preview
+```
+
+The production site is generated in `dist/`.
+
+## Project structure
 
 ```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+public/                 Static assets
+src/
+  components/           Shared UI and page sections
+  layouts/              Shared page layouts
+  pages/                Astro routes
+  scripts/              Client-side behavior and animations
+  styles/               Global styles
+astro.config.mjs        Astro and Tailwind configuration
+vercel.json             Vercel build configuration
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## Deploy to Vercel
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Import the repository with the project root set to the repository root. Vercel uses
+`npm run build` and publishes the generated `dist/` directory.
