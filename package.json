@@ -1,29 +1,12 @@
 {
-<<<<<<< HEAD
+  "name": "redenrayala",
+  "private": true,
   "scripts": {
-    "dev": "npm --prefix redenrayala run dev -- --host 127.0.0.1",
+    "dev": "npm --prefix redenrayala run dev -- --host 127.0.0.1 --port 5501",
     "build": "npm --prefix redenrayala run build",
     "preview": "npm --prefix redenrayala run preview"
   },
   "dependencies": {
     "gsap": "^3.15.1"
-=======
-  "name": "better-binary",
-  "type": "module",
-  "version": "0.0.1",
-  "engines": {
-    "node": ">=22.23.4"
-  },
-  "scripts": {
-    "dev": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
-  },
-  "dependencies": {
-    "@tailwindcss/vite": "^4.3.4",
-    "astro": "^7.4.7",
-    "tailwindcss": "^4.3.4"
->>>>>>> c85cd86e1f101e9fb8f40d07a00554020a152453
   }
 }
