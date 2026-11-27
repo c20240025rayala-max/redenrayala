@@ -1,7 +1,8 @@
 {
   "scripts": {
-    "build": "npm --prefix better-binary run build",
-    "preview": "npm --prefix better-binary run preview"
+    "dev": "npm --prefix redenrayala run dev -- --host 127.0.0.1",
+    "build": "npm --prefix redenrayala run build",
+    "preview": "npm --prefix redenrayala run preview"
   },
   "dependencies": {
     "gsap": "^3.15.1"
